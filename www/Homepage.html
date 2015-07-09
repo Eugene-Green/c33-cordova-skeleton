@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <title>HomePage</title>
+
+    <meta charset='utf-8' />
+
+    <link href="css/fullcalendar.css" rel="stylesheet" />
+    <link href="css/fullcalendarprint.css" rel="stylesheet" media="print" />
+    <script src="js/fullcalendar.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/jqueryui.js"></script>
+    <script src="js/justfullcalendar.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: '',
+                },
+                defaultDate: '2015-07-13',
+                editable: true,
+                eventLimit: true, // allow "more" link when too many events
+                allDaySlot: false,
+                events: 'http://helloworldneweg.azurewebsites.net/calendar.aspx',
+                eventColor: '#ff5511',
+                eventTextColor: '#4bb1e6',
+                crossDomain: 'true'
+
+
+               // eventClick: function () {
+                  //  var confirmTrue = confirm('Are you sure you want to give this shift away?');
+                    //if (confirmTrue == true) {
+                      //  window.open('/Shift_pool.html');
+                        //alert('Your shift has been sent to the Shift Pool.');
+
+                    //}
+                    //else {
+                       // alert('Your shift has not been given');
+                   // }
+               // }
+            });
+
+        });
+
+
+    </script>
+
+    <style>
+        body {
+            margin: 40px 10px;
+            padding: 0;
+            font-family: "Lucida Grande",Helvetica,Arial,cursive;
+            font-size: 14px;
+            color: #ff5511
+
+
+        }
+
+        #calendar {
+            max-width: 900px;
+            margin: 0 auto;
+            Background-color: white;
+            color: #4bb1e6;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id='calendar'></div>
+    <form id="shiftdata">
+        <input type="hidden" name="ShiftID" value="5" />
+    </form>
+    <a href="UpdateShift.html">
+        <div id="Shift" 
+             class="nav" 
+             style="border: 4px solid rgb(100,149,237);
+             border-color: #ff5511; 
+             color:#ff5511; 
+             background-color:#4bb1e6; 
+             position: absolute; 
+             top:50px; 
+             left:20px; 
+             width:70px; 
+             height:19px">
+            Drop Shift   
+        </div>
+    </a>
+
+</body>
+</html>
