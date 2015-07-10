@@ -2,16 +2,72 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Pick-Up Shift</title>
+	
+	
+	  <link href="css/citruscore.css" rel="stylesheet" />
+    <link href="css/fullcalendar.css" rel="stylesheet" />
+    <link href="css/fullcalendarmin.css" rel="stylesheet" />
+    <link href="css/fullcalendar.print.css" rel="stylesheet" media="print" />
 
-    <script src="https://code.jquery.com/jquery-1.8.3.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.8.3.js"></script>
     <script src="https://code.jquery.com/mobile/git/jquery.mobile-git.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/mobile/git/jquery.mobile-git.css" />
-    <script>
-       $(document).ready(function () {
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/mobile/git/jquery.mobile-git.css" /> -->
+    
+</head>
+<body class="citrus">
+    <!-- HEADER -->
+    <div class="header">
+        <a class="impersonation-bar"></a>
+        <div class="header-top">
+            <center><h1 style="color:white">Paylocity Shift Swap</h1></center>
+        </div>
+    </div>
+    <!-- END HEADER -->
+<!--     <form id="Shift">
+        <input type="text" name="ShiftID">DAY YOU WANT TO PICK UP
+        <input type="submit" value="Pick-Up Shift">
+    </form> -->
+	
+	
+	
+ <form name="getShift">
+						
+						<div class="form-group form-button">
+							<label for="getShift">
+								DAY YOU WANT TO PICK UP:
+							</label>
+							<input type="text" name="getShift" autocomplete="off"/>
+							<input type="button" class="button" onclick="check(this.form)" value="Pick Up Shift"/>
+						</div>
+					</form>
+
+<script>
+function check(form) { 
+           if (form.getShift.value == 15) {
+		   $.ajax({
+                   type: "POST",
+                   url: "http://helloworldneweg.azurewebsites.net/getShiftTwo.aspx",
+                   complete: function (data) {
+                       window.location = 'Homepage.html';
+                   }
+               });
+           }
+           else{
+               alert('Unsucessful Attempt');
+			   }
+			   }
+    </script> 
+	
+
+	
+	
+	
+	
+       <!-- $(document).ready(function () {
            $("#Shift").submit(function () {
                $.ajax({
                    type: "POST",
-                   url: "http://helloworldneweg.azurewebsites.net/getshift.aspx",
+                   url: "http://helloworldneweg.azurewebsites.net/getShiftTwo.aspx",
                    data: $(this).serialize(),
                    complete: function (data) {
                        window.location = 'Homepage.html';
@@ -19,13 +75,7 @@
                });
 
            });
-       });
-    </script>
-</head>
-<body>
-    <form id="Shift">
-        <input type="text" name="ShiftID">ShiftID
-        <input type="submit" value="Pick-Up Shift">
-    </form>
+       }); -->
+
 </body>
 </html>
