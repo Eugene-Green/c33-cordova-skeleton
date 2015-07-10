@@ -9,9 +9,9 @@
     <link href="css/fullcalendarmin.css" rel="stylesheet" />
     <link href="css/fullcalendar.print.css" rel="stylesheet" media="print" />
 
-    <!-- <script src="https://code.jquery.com/jquery-1.8.3.js"></script>
-    <script src="https://code.jquery.com/mobile/git/jquery.mobile-git.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/mobile/git/jquery.mobile-git.css" /> -->
+     <script src="https://code.jquery.com/jquery-1.8.3.js"></script>
+    <!--<script src="https://code.jquery.com/mobile/git/jquery.mobile-git.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/mobile/git/jquery.mobile-git.css" /> 
     
 </head>
 <body class="citrus">
@@ -30,7 +30,7 @@
 	
 	
 	
- <form name="getShift">
+                    <form name="getShift">
 						
 						<div class="form-group form-button">
 							<label for="getShift">
@@ -47,7 +47,7 @@ function check(form) {
 		   $.ajax({
                    type: "POST",
                    url: "http://helloworldneweg.azurewebsites.net/getShiftTwo.aspx",
-                   complete: function (data) {
+                   complete: function () {
                        window.location = 'Homepage.html';
                    }
                });
