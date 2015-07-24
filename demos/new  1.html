@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- <script src="https://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="https://code.jquery.com/mobile/git/jquery.mobile-git.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/mobile/git/jquery.mobile-git.css" /> -->
+
+
+    <title>SYNERGY SWAP</title>
+
+    <link href="css/citruscore.css" rel="stylesheet" />
+    <link href="css/fullcalendar.css" rel="stylesheet" />
+    <link href="css/fullcalendarmin.css" rel="stylesheet" />
+    <link href="css/fullcalendar.print.css" rel="stylesheet" media="print" />
+
+    <!-- <script>
+            $("#login").submit(function () {
+                $.ajax({
+                    type: "POST",
+                    url: "http://helloworldneweg.azurewebsites.net/login.aspx",
+                    data: $(this).serialize(),
+					complete: function (data) {
+					window.location = 'Homepage.html';
+                                                
+                    }
+                });
+
+            });
+
+    </script> -->
+
+
+</head>
+<body class="citrus">
+    <!-- HEADER -->
+    <div class="header">
+        <a class="impersonation-bar"></a>
+        <div class="header-top">
+            <center><h1 style="color:white">Paylocity Shift Swap</h1></center>
+        </div>
+    </div>
+    <!-- END HEADER -->
+
+ <!--    <form>
+        <center>
+            <table>
+                <tbody>
+                    <tr>
+                        <th><div>Employee ID:</div></th>
+                        <td><input type="text"  name="EmpID" /></td>
+                    </tr>
+                    <tr>
+                        <th><div>Password:</div></th>
+                        <td><input type="Password"  name="Password" /></td>
+                    </tr>
+                    <tr> -->
+					<form name="login">
+						<div class="form-group">
+							<label for="employeeid">
+								Employee ID:
+							</label>
+							<input type="text" name="employeeid" autocomplete="off"/>
+						</div>
+						<div class="form-group form-button">
+							<label for="password">
+								Password:
+							</label>
+							<input type="password" name="password" autocomplete="off"/>
+							<input type="button" class="button" onclick="check(this.form)" value="Login"/>
+						</div>
+					</form>
+					
+					
+					<!-- <form method="get" action="Homepage.html">
+                        <td><button class="button" type="submit">Login</button></td>
+                    </form> -->
+					
+					
+					<!-- </tr>
+                </tbody>
+            </table>
+        </center>
+    </form> -->
+
+	<script>
+       function check(form) { 
+           if (form.employeeid.value == 123 && form.password.value == 11111) {
+               location.href='external-dragging.html';/*opens the target page while employeeid matches*/
+           }
+           else{
+               alert('Unsucessful Attempt');
+			   }
+			   }
+	</script>
+
+
+</body>
+</html>
