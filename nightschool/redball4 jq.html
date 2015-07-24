@@ -15,6 +15,12 @@ function moveright(){
   pos.left = pos.left + 50;
   elem.css({ top: pos.top+'px', left: pos.left+'px' });
 }
+function moveleft(){
+  var elem = $("#redball");
+  var pos = elem.offset();
+  pos.left = pos.left - 50;
+  elem.css({ top: pos.top+'px', left: pos.left+'px' });
+}
 function grow(){
 	var elem = $("#mytitle");
 	elem.css("font-size","100px");
@@ -34,6 +40,7 @@ function fadein(){
 <p id="mytitle">GINO GREEN</p>
 <img id='redball' src='http://4.bp.blogspot.com/-iedt6pJj_5s/VEqN90oTZGI/AAAAAAAAAoc/QlH5RHWrtUA/s1600/Ball.gif'/>
 <button onclick="moveright();"style="background-color:lightgreen">TO THE RIGHT TO THE RIGHT</button>
+<button onclick="moveleft();"style="background-color:darkgreen">TO THE LEFT TO THE LEFT</button>
 <button onclick="grow();"style="background-color:purple">GET BIG</button>
 <button onclick="fadeout();"style="background-color:red">LEAVE</button>
 <button onclick="fadein();"style="background-color:brown">COME BACK</button>
