@@ -3,7 +3,7 @@
 <style>
 #redball{
 position: absolute;
-left: 90px;
+right: 90px;
 top: 100px;
 }
 </style>
@@ -22,27 +22,34 @@ function moveleft(){
   elem.css({ top: pos.top+'px', left: pos.left+'px' });
 }
 function grow(){
-	var elem = $("#mytitle");
+	var elem = $("#gino");
 	elem.css("font-size","100px");
 }
+function shrink(){
+	var elem = $("#gino");
+	elem.css("font-size","25px");
+}
 function fadeout(){
-	var elem = $("#mytitle");
+	var elem = $("#gino");
 	elem.fadeOut();
 }
 function fadein(){
-	var elem = $("#mytitle");
+	var elem = $("#gino");
 	elem.fadeIn();
 }
 
 </script>
 </head>
 <body>
-<p id="mytitle">GINO GREEN</p>
+<center>
+<p id="gino">GINO GREEN</p>
+</center>
 <img id='redball' src='http://4.bp.blogspot.com/-iedt6pJj_5s/VEqN90oTZGI/AAAAAAAAAoc/QlH5RHWrtUA/s1600/Ball.gif'/>
 <center>
 <button onclick="moveright();"style="background-color:lightgreen">TO THE RIGHT TO THE RIGHT</button>
 <button onclick="moveleft();"style="background-color:darkgreen">TO THE LEFT TO THE LEFT</button>
-<button onclick="grow();"style="background-color:purple">GET BIG</button>
+<button onclick="grow();"style="background-color:purple">HULK</button>
+<button onclick="shrink();"style="background-color:lightblue">BRUCE</button>
 <button onclick="fadeout();"style="background-color:red">LEAVE</button>
 <button onclick="fadein();"style="background-color:brown">COME BACK</button>
 </center>
@@ -59,7 +66,7 @@ function changeColor(id)
 
 <div id="myid"></div>
 
-<center><a href="#" onclick="changeColor('mytitle'); return true;">CHANGE TITLE COLOR</a></center>
+<center><a href="#" onclick="changeColor('gino'); return true;">CHANGE TITLE COLOR</a></center>
 
 </script>
 </body>
